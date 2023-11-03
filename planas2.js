@@ -1,4 +1,4 @@
-/* //config 
+/* //config  X
 
 const {config} = require('dotenv');
 
