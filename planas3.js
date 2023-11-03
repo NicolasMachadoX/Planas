@@ -1,4 +1,4 @@
-//controllers jeje
+//controllers 
 const User= require('../models/userJWT');
 const jwt = require('jsonwebtoken');
 const config = require('../config');

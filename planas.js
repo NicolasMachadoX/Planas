@@ -1,4 +1,4 @@
-/* const {MongoClient} = require('mongodb'); jeje
+/* const {MongoClient} = require('mongodb'); 
 
 
 const conexion = async () =>{

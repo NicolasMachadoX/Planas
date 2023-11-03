@@ -1,4 +1,4 @@
-/* //config jeje
+/* //config 
 
 const {config} = require('dotenv');
 

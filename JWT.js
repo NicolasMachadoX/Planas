@@ -8,7 +8,7 @@ const register = asynd (req,res) =>{
         const {name,email,password} = req.body;
         const newUser = new User({name,email,password});
 
-        //encryptar la password
+        //encryptar 
 
         newUser.password = await newUser.encryptPassword(newUser.password);
         await newUser.save();
