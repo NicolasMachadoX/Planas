@@ -101,3 +101,22 @@ const postDeleteUpdateHandler = async () => {
 };
 
 export default App;
+
+
+const post = async () => {
+    const response = await fetch('',{
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(newData)
+    })
+    if(response.ok){
+        console.log('epica man');
+        window.localStorage.reload();
+    }else{
+        console.log('not man');
+    }
+
+    
+}
