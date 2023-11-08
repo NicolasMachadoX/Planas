@@ -109,3 +109,25 @@ return(
 }
 
 export default Cart; */
+/* 
+const Cart = ({cartItems,onRemove}) => {
+ return(
+    <div className="cart">
+        <h1>Carrito</h1>
+        {cartItems.length === 0 ? (<p>'carrito Vacio</p>)
+        :(
+            <ul>
+                {cartItems.map((item,i)=>(
+                    <li key={i}>
+                        {item.name} - ${item.precio}
+                        <button onClick={()=>onRemove(item)}>Eliminar</button>
+                    </li>
+                ))}
+
+            </ul>
+        )}
+    </div>
+ )
+};
+
+export default Cart; */

@@ -120,3 +120,40 @@ const post = async () => {
 
     
 }
+
+
+useEffect(()=>{
+    const getAllData = async () => {
+        try {
+            const response = await fetch('');
+            const data = await response.json();
+            setData(data);
+        } catch (error) {
+         console.log('we have a problem');   
+        }
+        }
+    getAllData();
+
+    },[]);
+
+    const putPostUpdate = async() => {
+        try {
+            const response = await fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(newData)
+            })
+
+            if(response.ok){
+                console.log('works');
+                window.locate.reload();
+            }else{
+                console.log('doesnt works');
+            }
+            
+        } catch (error) {
+            console.log('we have a problem men');
+        }
+    }

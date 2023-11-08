@@ -217,4 +217,47 @@ const remove = (item) => {
 </div> */
 
 
-c
+const App = () => {
+const [cartItems,setCartItems] = useState([]);
+const [isCartVisible, setCartVisible] = useState(false);
+
+const add = (item) => {
+  setCartItems([...cartItems,item]);
+}
+
+};
+
+const remove = (item) => {
+  const updateCart = cartItems.filter((cartItem)=>cartItem !== item);
+  setCartItems(updateCart);
+}
+
+return(
+  <div className="app">
+    <h1>shop</h1>
+
+  <button onClick={()=> setCartVisible(!isCartVisible)}>
+  {isCartVisible ? 'ocultar Cart' : 'mostrar cart'}
+  </button>
+
+
+  <div className="productList">
+    {data.map((item,i)=>(
+      <div className="product" key={i}>
+        <span>{item.name}</span>
+        <span>{item.price}</span>
+        <button onClick={()=> add(item)}>Agregar al carrito</button>
+      </div>
+    ))
+    }
+
+    {isCartVisible && ( <Cart cartItems={cartItems} onRemove={remove}/>)}
+  </div>
+
+
+  </div>
+)
+
+export default App;
+
+
